@@ -2,7 +2,7 @@
 
 ## Description
 
-This project performs data analysis on the stock price action of several large-cap companies over a specific time period. The EDA uses the pandas, numpy, and matplotlib.pyplot packages to load the data, clean it, and visualize it. The results of the EDA are available in the Stock EDA Python Syntax File.
+This project performs data analysis on the stock price action of several large-cap companies over a specific time period. The EDA uses the pandas, numpy, and matplotlib.pyplot packages to load the data, clean it, and visualize it. The results of the EDA are available in the Stocks-Exploratory-Analysis-Python.ipynb File.
 
 ## Variables
 - Ticker: The stock symbol, such as "AAPL" for Apple Inc.
