@@ -1,3 +1,4 @@
+```python
 import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,7 +6,7 @@ import pandas as pd
 import seaborn as sns
 import warnings 
 warnings.filterwarnings("ignore")
-
+```
 
 ```python
 #load data
@@ -16,20 +17,7 @@ df
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -167,7 +155,7 @@ df
   </tbody>
 </table>
 <p>248 rows × 7 columns</p>
-</div>
+
 
 
 
@@ -194,20 +182,7 @@ AAPL
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -345,7 +320,6 @@ AAPL
   </tbody>
 </table>
 <p>62 rows × 7 columns</p>
-</div>
 
 
 
