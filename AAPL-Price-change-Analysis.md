@@ -404,6 +404,8 @@ FROM
 |AAPL|	4	|2023|	165.05|	10.09|	6.11 %|
 |AAPL|	5	|2023|	168.99|	3.94|	2.33 %|
 
+Creating a dataframe from the above result
+
 ```Python
 AAPL_changes = {
     'Ticker':['AAPL', 'AAPL', 'AAPL', 'AAPL'],
