@@ -3,7 +3,6 @@ Upon conducting an in-depth analysis of the AAPL stocks, a wealth of valuable in
 
 ```python
 #importing necessary libraries 
-import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
