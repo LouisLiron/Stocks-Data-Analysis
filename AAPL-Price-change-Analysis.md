@@ -351,7 +351,7 @@ AAPL['Close'].plot(kind = 'box', ax = axs[1], title = 'AAPL Boxplot',ylabel = 'P
 ```
 ![AAPL3](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/37416a3d-9eec-47dc-ade6-19aeb6f913bf)
 
-The combination of the histogram, boxplot, and SQL syntax enables us to extract further insights regarding the data distribution. Upon analysis, it becomes apparent that a substantial portion of the data is tightly clustered within the price range of $152 to $165, demonstrating a pronounced concentration. The highest recorded value is approximately $178, while the lowest value hovers around $145. By leveraging SQL syntax, we can delve deeper into the data, performing additional calculations, aggregations, or filtering to gain a more comprehensive understanding of the underlying patterns and trends.
+The combination of the histogram and boxplot enables us to extract further insights regarding the data distribution. Upon analysis, it becomes apparent that a substantial portion of the data is tightly clustered within the price range of $152 to $165, demonstrating a pronounced concentration. The highest recorded value is approximately $178, while the lowest value hovers around $145. By leveraging SQL syntax, we can delve deeper into the data, performing additional calculations, aggregations, or filtering to gain a more comprehensive understanding of the underlying patterns and trends.
 
 ~~~SQL
 --viewing the date range 
