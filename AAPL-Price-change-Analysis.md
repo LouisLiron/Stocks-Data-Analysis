@@ -309,7 +309,7 @@ AAPL
 <p>62 rows × 7 columns</p>
 
 ```python
-#Dropping the volume column to make plotting the other values easier because it it way too big
+#Dropping the volume column to make plotting the other values easier because it is way too big
 AAPL_without_volume = AAPL.drop('Volume', axis=1)
 ```
 ```python
