@@ -13,3 +13,11 @@ This project performs data analysis on the stock price action of several large-c
 - Close: The closing price of the stock on the given date.
 - Adj_Close: The adjusted closing price of the stock, which takes into account dividends and stock splits.
 - Volume: The total number of shares traded on the given date.
+
+## Objective
+1. Conduct an in-depth analysis of the data to identify and understand the prevailing trends and patterns.
+2.Offer valuable insights regarding the performance of AAPL stocks.
+
+## Analysis
+1. Conduct an in-depth analysis of the data to identify and understand the prevailing trends and patterns.
+So let's skip AAPL stocks because that will be done separately. The next would be 
