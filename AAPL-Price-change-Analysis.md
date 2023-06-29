@@ -413,7 +413,7 @@ AAPL_changes = {
     'Year': [2023,2023,2023,2023],
     'Monthly_Price_Avg': [151.06,154.96,165.05,168.99],
     'MoM_Price_Change': [0.0, 3.9,10.09,3.94],
-    'MoM_Pct_Change': [0.0,3.0,7.0,2.0]}
+    'MoM_Pct_Change': [0.0,2.52,6.11,2.33]}
 
 AAPL_MoM = pd.DataFrame(AAPL_changes)
 AAPL_MoM = AAPL_MoM.set_index(['Month','Year'])
@@ -425,9 +425,9 @@ print(AAPL_MoM)
 |Month| Year|Ticker|Monthly_Price_Avg|MoM_Price_Change|MoM_Pct_Change|
 |------|------|------|------|------|------|
 |2 |2023|AAPL|151.06|0.00|0.0|
-|3 |2023|AAPL|154.96|3.90|3.0|
-|4 |2023|AAPL|165.05|10.09|7.0|
-|5 |2023|AAPL|168.99|3.94|2.0|
+|3 |2023|AAPL|154.96|3.90|2.52|
+|4 |2023|AAPL|165.05|10.09|6.11|
+|5 |2023|AAPL|168.99|3.94|2.33|
 
 ```python
 # creating subplots
