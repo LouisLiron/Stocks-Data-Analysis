@@ -382,6 +382,8 @@ plt.ylabel("Values")
 
 ![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/fdb3ffc9-6ab4-46e5-b3f6-c1218930d7d4)
 
+Upon examining the boxplot, it is apparent that there are no marks or points beyond the whiskers. This signifies the absence of outliers in the dataset. The lack of any data points outside the whiskers indicates that all values fall within a reasonable range, without any extreme or unusual observations.
+
 
 ~~~SQL
 --viewing the date range 
