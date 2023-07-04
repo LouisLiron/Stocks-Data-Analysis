@@ -340,18 +340,48 @@ plt.grid()
 This graph depicting the shares of AAPL stocks reveals a notable absence of stability. Notably, there are prominent spikes observed in the months of March, mid-April, and the end of May.
 
 ```python
-#showing the disribution of data 
-fig, axs = plt.subplots(nrows =1 , ncols =2 , figsize = (15,5))
-
-# AAPL Histogram
-AAPL['Close'].plot(kind = 'hist', bins = 20, ax = axs[0], title = 'AAPL Histogram')
-
-# AAPL Boxplot 
-AAPL['Close'].plot(kind = 'box', ax = axs[1], title = 'AAPL Boxplot',ylabel = 'Price', vert = True)
+import seaborn as sns
+sns.set(style='ticks', palette='deep')
+from matplotlib import style
+## AAPL Histogram
+style.use('ggplot')
+plt.hist(AAPL['Close'], color = 'blue', histtype = 'bar', rwidth=0.8)
 ```
-![AAPL3](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/37416a3d-9eec-47dc-ade6-19aeb6f913bf)
+**Results**
 
-The combination of the histogram and boxplot enables us to extract further insights regarding the data distribution. Upon analysis, it becomes apparent that a substantial portion of the data is tightly clustered within the price range of $152 to $165, demonstrating a pronounced concentration. The highest recorded value is approximately $178, while the lowest value hovers around $145. By leveraging SQL syntax, we can delve deeper into the data, performing additional calculations, aggregations, or filtering to gain a more comprehensive understanding of the underlying patterns and trends.
+![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/5eb90191-4f30-4947-a5e4-2f2c2fe0a3fc)
+
+Let's begin by understanding the insights that histograms can provide. A histogram allows us to identify subgroups or clusters within a dataset, determine the central tendency or mode, and assess the skewness of the data.
+
+Regarding subgroups or clusters, the histogram displays two prominent clusters on the chart: one centered around $153 and another around $166. This indicates that these regions serve as central points for the clusters, with the majority of prices concentrated around them.
+
+In terms of the mode, it is evident that each cluster has a bar with the highest frequency. This bar represents the mode of that particular cluster, highlighting the central point around which most prices are concentrated.
+
+Assessing the skewness of the data becomes challenging due to its bimodal nature. To resolve this issue, we can calculate the skewness of the dataset below;
+
+```python
+
+from scipy.stats import skew
+skewness = skew(AAPL['Close'])
+print('Skewness :', skewness)
+
+```
+**Results**
+
+Skewness : 0.02853740556215772
+
+Based on the obtained results, it can be concluded that the dataset exhibits a minimal positive skewness. The skewness value of 0.0285 indicates a very slight deviation from perfect symmetry. This subtle skewness is evident in the corresponding boxplot, where the median line shows a slight shift towards the left, and the right whisker appears marginally longer. The relatively small magnitude of 0.0285 reinforces the observation of this minor skewness effect.
+
+
+```python
+# Create a box plot
+plt.boxplot(AAPL['Close'], vert=False)
+plt.title("Box Plot of Bimodal Data")
+plt.ylabel("Values")
+```
+
+![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/fdb3ffc9-6ab4-46e5-b3f6-c1218930d7d4)
+
 
 ~~~SQL
 --viewing the date range 
