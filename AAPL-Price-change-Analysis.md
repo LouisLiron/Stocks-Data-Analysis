@@ -340,16 +340,62 @@ plt.grid()
 This graph depicting the shares of AAPL stocks reveals a notable absence of stability. Notably, there are prominent spikes observed in the months of March, mid-April, and the end of May.
 
 ```python
+round(AAPL['Volume'].describe(), 0)
+```
+
+**Results**
+
+|count|62.0|
+|------|------|
+|mean | 60,282,958.0|
+|std  | 14,306,053.0|
+|min  | 41,516,200.0|
+|25%  | 49,607,025.0|
+|50%  | 56,094,550.0|
+|75%  | 68,376,175.0|
+|max  | 113,316,400.0|
+
+
+```python
+plt.boxplot(AAPL['Volume'], vert=False)
+plt.xlabel('Shares')
+plt.ylabel('Boxplot')
+plt.title('AAPL Volumes Boxplot')
+plt.show()
+```
+
+**Results**
+
+![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/63099be5-89c6-464b-bfc9-8b161ba10680)
+
+Viewing the boxplot together with the 
+
+```python
+AAPL['Volume'].hist()
+plt.xlabel('Shares/100,000,000')
+plt.ylabel('Frequency')
+plt.title('Volume/shares histogram')
+plt.show()
+```
+
+**Results**
+
+![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/b67a185c-adb7-4e7c-aff9-ba421b305930)
+
+```python
 import seaborn as sns
 sns.set(style='ticks', palette='deep')
 from matplotlib import style
 ## AAPL Histogram
 style.use('ggplot')
 plt.hist(AAPL['Close'], color = 'blue', histtype = 'bar', rwidth=0.8)
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.title('Stock Prices histogram')
 ```
 **Results**
 
-![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/5eb90191-4f30-4947-a5e4-2f2c2fe0a3fc)
+![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/70a73064-4c7f-43c3-a168-15c9cf7d0228)
 
 Let's begin by understanding the insights that histograms can provide. A histogram allows us to identify subgroups or clusters within a dataset, determine the central tendency or mode, and assess the skewness of the data.
 
