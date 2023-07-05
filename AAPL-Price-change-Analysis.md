@@ -355,6 +355,16 @@ round(AAPL['Volume'].describe(), 0)
 |75%  | 68,376,175.0|
 |max  | 113,316,400.0|
 
+```python
+from statistics import mode
+mode = mode(AAPL['Volume'])
+print('Mode of AAPL Shares:', mode)
+```
+
+**Results**
+
+Mode of AAPL Shares: 83,322,600.0
+
 
 ```python
 plt.boxplot(AAPL['Volume'], vert=False)
@@ -368,7 +378,12 @@ plt.show()
 
 ![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/63099be5-89c6-464b-bfc9-8b161ba10680)
 
-Viewing the boxplot together with the 
+Upon reviewing the boxplot and conducting a summary descriptive analysis, several observations can be made. Firstly, the presence of two outliers is evident, indicating that these values lie outside the reasonable range of the dataset. Consequently, they are displayed separately from the main boxplot. While typically it would be necessary to remove outliers for analysis, in this case, it is believed that they can be included in the analysis.
+
+Furthermore, the boxplot provides insights into the skewness of the dataset. It reveals a positive skewness, indicating that the mode of the dataset is positioned towards the left side. Additionally, the tail of the dataset extends towards the right, while the majority of values are concentrated on the left side.
+
+In summary, the combination of the boxplot and summary descriptive analysis reveals the presence of outliers, a positive skewness in the dataset, a leftward mode, a rightward tail, and a concentration of values on the left side.
+
 
 ```python
 AAPL['Volume'].hist()
@@ -381,6 +396,18 @@ plt.show()
 **Results**
 
 ![image](https://github.com/LouisLiron/Stocks-Data-Analysis/assets/124049051/b67a185c-adb7-4e7c-aff9-ba421b305930)
+
+The histogram confirms that the tha tail of the dataset is towards the right and also reveals the outliers in the dataset which is the last box in the histogram. This solidifies our assumption that is was right skewed. Let's look at the mean, mode and median of the dataset.
+
+In a positively skewed dataset, the arrangement of the magnitude of the mean, mode, and median is typically as follows:
+
+Mode: The mode, 83322600.0, is the value that occurs most frequently in the dataset. In a positively skewed distribution, the mode tends to be the smallest value, as the majority of values are concentrated towards the left side. Therefore, the mode would have the lowest magnitude.
+
+Median: The median, 56,094,550.0, represents the middle value when the dataset is arranged in ascending or descending order. In a positively skewed distribution, the median tends to be greater than the mode but smaller than the mean. It is influenced by the skewness, as it is less affected by extreme values in the tail. Thus, the median would have a moderate magnitude.
+
+Mean: The mean, 60,282,958.0, is the average of all the values in the dataset. In a positively skewed distribution, the mean tends to be the greatest value among the three (mean, median, and mode). This is because the skewed tail, which contains a few higher values, pulls the mean towards the right. The mean would have the greatest magnitude among the three measures.
+
+### Lets move on to the stock prices
 
 ```python
 import seaborn as sns
